@@ -21,8 +21,8 @@ jobs:
       
       - name: handleEnv
         if: ${{secrets.TEST != ""}}
-        env: 
-          TEST: ${{secrets.TEST}}
+        run: 
+          echo "TEST=${{secrets.TEST}}" >> $GITHUB_ENV
 
       
       # Runs a single command using the runners shell
