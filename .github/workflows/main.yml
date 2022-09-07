@@ -18,7 +18,8 @@ jobs:
     steps:
       - name: handleEnv
         run: 
-          if [[ ${{secrets.TEST1}} != "" ]]]; then echo "hi" >> $GITHUB_ENV if
+          if [[ "${{secrets.TEST1}}" != "" ]]]; then echo "hi" >> $GITHUB_ENV if
+          if [[ "${{secrets.TEST1}}" == "" ]]]; then echo "hi" >> $GITHUB_ENV if
 
       
       # Runs a single command using the runners shell
