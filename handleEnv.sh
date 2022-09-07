@@ -1,6 +1,7 @@
 #! /bin/bash
 
-if [ ${{secrets.TEST}} ]; then
+echo ${{secrets.TEST}}
+if [  -z ${{secrets.TEST}} ]; then
 echo hello
 export TEST=${{secrets.TEST}}
 fi
