@@ -17,7 +17,7 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       - name: handleEnv
-        run: 
+        run: |
           if [[ "${{secrets.TEST1}}" != "" ]]]; then echo "hi" >> $GITHUB_ENV if
           if [[ "${{secrets.TEST1}}" == "" ]]]; then echo "hi" >> $GITHUB_ENV if
 
